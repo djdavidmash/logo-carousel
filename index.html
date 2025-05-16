@@ -12,12 +12,13 @@
     }
 
     .logo-carousel {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-    }
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start; /* Align logos to the top */
+  padding-bottom: 10px; /* Add space at the bottom */
+}
 
     .logo-track {
       display: flex;
@@ -30,12 +31,12 @@
     }
 
     .logo-track img {
-      height: 90%;
-      width: auto;
-      margin: 0 2rem; /* margin is back! */
-      object-fit: contain;
-      display: block;
-    }
+  height: 100%;
+  width: auto;
+  margin: 0 2rem;
+  object-fit: contain;
+  display: block;
+}
 
     @keyframes scroll {
       0% { transform: translateX(0); }
