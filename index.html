@@ -20,9 +20,11 @@
     }
 
     .logo-track {
-      display: inline-flex;
-      animation: scroll 30s linear infinite;
-    }
+  display: flex;
+  align-items: center;
+  height: 100%;
+  animation: scroll 30s linear infinite;
+}
 
     .logo-track img {
   max-height: 100%;
@@ -30,7 +32,6 @@
   width: auto;
   margin: 0 2rem;
   object-fit: contain;
-  display: block;
 }
 
     @keyframes scroll {
