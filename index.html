@@ -11,16 +11,15 @@
       background: transparent;
     }
 
-    .logo-carousel {
+   .logo-carousel {
   width: 100%;
   height: 100%;
   overflow: hidden;
   display: flex;
-  align-items: flex-start; /* Align logos to the top */
-  padding-bottom: 10px; /* Add space at the bottom */
+  align-items: center;
 }
 
-    .logo-track {
+.logo-track {
   display: flex;
   align-items: center;
   height: 100%;
@@ -28,12 +27,15 @@
   width: max-content;
   box-sizing: border-box;
   animation: scroll 30s linear infinite;
-  padding: 0 2rem; /* This replaces image margin */
+  padding: 0 2rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
 }
 
 .logo-track img {
   height: 100%;
   width: auto;
+  margin: 0 2rem;
   object-fit: contain;
   display: block;
 }
