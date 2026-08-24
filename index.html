@@ -40,12 +40,15 @@
     }
 
     .logo-track img {
-      height: 70%;
-      width: 160px;           /* fixed slot: reserves space before the file loads */
+      height: 100%;
+      width: auto;
+      aspect-ratio: 1 / 1;    /* every source PNG is an 800x800 square canvas —
+                                  this reserves the correct square slot instantly,
+                                  without waiting for the file to actually load */
       margin: 0 2rem;
       object-fit: contain;
       display: block;
-      flex-shrink: 0;         /* stops flex from squeezing a slot before load */
+      flex-shrink: 0;
     }
 
     @keyframes scroll {
@@ -57,37 +60,37 @@
 <body>
   <div class="logo-carousel" id="carousel">
     <div class="logo-track" id="track">
-      <img src="bontech.png" alt="bontech" width="160" height="112">
-      <img src="cratis.png" alt="cratis" width="160" height="112">
-      <img src="dcnorth.png" alt="dcnorth" width="160" height="112">
-      <img src="hturist.png" alt="hturist" width="160" height="112">
-      <img src="imperial-riviera.png" alt="imperial riviera" width="160" height="112">
-      <img src="mup.png" alt="mup" width="160" height="112">
-      <img src="KonicaMinolta.png" alt="Konica Minolta" width="160" height="112">
-      <img src="PW.png" alt="PW" width="160" height="112">
-      <img src="RB.png" alt="RB" width="160" height="112">
-      <img src="Valamar.png" alt="Valamar" width="160" height="112">
-      <img src="rbs.png" alt="rbs" width="160" height="112">
-      <img src="suri.png" alt="suri" width="160" height="112">
-      <img src="szfoi.png" alt="szfoi" width="160" height="112">
-      <img src="tupperware.png" alt="tupperware" width="160" height="112">
-      <img src="varazdin.png" alt="varazdin" width="160" height="112">
+      <img src="bontech.png" alt="bontech">
+      <img src="cratis.png" alt="cratis">
+      <img src="dcnorth.png" alt="dcnorth">
+      <img src="hturist.png" alt="hturist">
+      <img src="imperial-riviera.png" alt="imperial riviera">
+      <img src="mup.png" alt="mup">
+      <img src="KonicaMinolta.png" alt="Konica Minolta">
+      <img src="PW.png" alt="PW">
+      <img src="RB.png" alt="RB">
+      <img src="Valamar.png" alt="Valamar">
+      <img src="rbs.png" alt="rbs">
+      <img src="suri.png" alt="suri">
+      <img src="szfoi.png" alt="szfoi">
+      <img src="tupperware.png" alt="tupperware">
+      <img src="varazdin.png" alt="varazdin">
       <!-- Duplicate set for the seamless loop -->
-      <img src="bontech.png" alt="bontech" width="160" height="112">
-      <img src="cratis.png" alt="cratis" width="160" height="112">
-      <img src="dcnorth.png" alt="dcnorth" width="160" height="112">
-      <img src="hturist.png" alt="hturist" width="160" height="112">
-      <img src="imperial-riviera.png" alt="imperial riviera" width="160" height="112">
-      <img src="mup.png" alt="mup" width="160" height="112">
-      <img src="KonicaMinolta.png" alt="Konica Minolta" width="160" height="112">
-      <img src="PW.png" alt="PW" width="160" height="112">
-      <img src="RB.png" alt="RB" width="160" height="112">
-      <img src="Valamar.png" alt="Valamar" width="160" height="112">
-      <img src="rbs.png" alt="rbs" width="160" height="112">
-      <img src="suri.png" alt="suri" width="160" height="112">
-      <img src="szfoi.png" alt="szfoi" width="160" height="112">
-      <img src="tupperware.png" alt="tupperware" width="160" height="112">
-      <img src="varazdin.png" alt="varazdin" width="160" height="112">
+      <img src="bontech.png" alt="bontech">
+      <img src="cratis.png" alt="cratis">
+      <img src="dcnorth.png" alt="dcnorth">
+      <img src="hturist.png" alt="hturist">
+      <img src="imperial-riviera.png" alt="imperial riviera">
+      <img src="mup.png" alt="mup">
+      <img src="KonicaMinolta.png" alt="Konica Minolta">
+      <img src="PW.png" alt="PW">
+      <img src="RB.png" alt="RB">
+      <img src="Valamar.png" alt="Valamar">
+      <img src="rbs.png" alt="rbs">
+      <img src="suri.png" alt="suri">
+      <img src="szfoi.png" alt="szfoi">
+      <img src="tupperware.png" alt="tupperware">
+      <img src="varazdin.png" alt="varazdin">
     </div>
   </div>
 
