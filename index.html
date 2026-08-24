@@ -11,37 +11,42 @@
       background: transparent;
     }
 
-  .logo-carousel {
-  width: 100vw; /* full browser width */
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-}
+    .logo-carousel {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
 
-.logo-track {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  max-height: 100%;
-  width: max-content;
-  box-sizing: border-box;
-  animation: scroll 30s linear infinite;
-  padding: 0 2rem;
-  margin-left: -2rem;
-  margin-right: -2rem;
-}
+    .logo-carousel.loaded {
+      opacity: 1;
+    }
 
-.logo-track img {
-  height: 100%;
-  width: auto;
-  margin: 0 2rem;
-  object-fit: contain;
-  display: block;
-}
+    .logo-track {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      width: max-content;
+      animation: scroll 30s linear infinite;
+      animation-play-state: paused;
+      will-change: transform;
+    }
+
+    .logo-carousel.loaded .logo-track {
+      animation-play-state: running;
+    }
+
+    .logo-track img {
+      height: 70%;
+      width: 160px;           /* fixed slot: reserves space before the file loads */
+      margin: 0 2rem;
+      object-fit: contain;
+      display: block;
+      flex-shrink: 0;         /* stops flex from squeezing a slot before load */
+    }
 
     @keyframes scroll {
       0% { transform: translateX(0); }
@@ -50,40 +55,57 @@
   </style>
 </head>
 <body>
-  <div class="logo-carousel">
-    <div class="logo-track">
-      <img src="bontech.png" alt="bontech">
-      <img src="cratis.png" alt="cratis">
-      <img src="dcnorth.png" alt="dcnorth">
-      <img src="hturist.png" alt="hturist">
-      <img src="imperial riviera.png" alt="imperial riviera">
-      <img src="mup.png" alt="mup">
-      <img src="KonicaMinolta.png" alt="Konica Minolta">
-      <img src="PW.png" alt="PW">
-      <img src="RB.png" alt="RB">
-      <img src="Valamar.png" alt="Valmar">
-      <img src="rbs.png" alt="rbs">
-      <img src="suri.png" alt="suri">
-      <img src="szfoi.png" alt="szfoi">
-      <img src="tupperware.png" alt="tupperware">
-      <img src="varazdin.png" alt="varazdin">
-      <!-- Duplicate for seamless scroll -->
-      <img src="bontech.png" alt="bontech">
-      <img src="cratis.png" alt="cratis">
-      <img src="dcnorth.png" alt="dcnorth">
-      <img src="hturist.png" alt="hturist">
-      <img src="imperial riviera.png" alt="imperial riviera">
-      <img src="mup.png" alt="mup">
-      <img src="KonicaMinolta.png" alt="Konica Minolta">
-      <img src="PW.png" alt="PW">
-      <img src="RB.png" alt="RB">
-      <img src="Valamar.png" alt="Valmar">
-      <img src="rbs.png" alt="rbs">
-      <img src="suri.png" alt="suri">
-      <img src="szfoi.png" alt="szfoi">
-      <img src="tupperware.png" alt="tupperware">
-      <img src="varazdin.png" alt="varazdin">
+  <div class="logo-carousel" id="carousel">
+    <div class="logo-track" id="track">
+      <img src="bontech.png" alt="bontech" width="160" height="112">
+      <img src="cratis.png" alt="cratis" width="160" height="112">
+      <img src="dcnorth.png" alt="dcnorth" width="160" height="112">
+      <img src="hturist.png" alt="hturist" width="160" height="112">
+      <img src="imperial-riviera.png" alt="imperial riviera" width="160" height="112">
+      <img src="mup.png" alt="mup" width="160" height="112">
+      <img src="KonicaMinolta.png" alt="Konica Minolta" width="160" height="112">
+      <img src="PW.png" alt="PW" width="160" height="112">
+      <img src="RB.png" alt="RB" width="160" height="112">
+      <img src="Valamar.png" alt="Valamar" width="160" height="112">
+      <img src="rbs.png" alt="rbs" width="160" height="112">
+      <img src="suri.png" alt="suri" width="160" height="112">
+      <img src="szfoi.png" alt="szfoi" width="160" height="112">
+      <img src="tupperware.png" alt="tupperware" width="160" height="112">
+      <img src="varazdin.png" alt="varazdin" width="160" height="112">
+      <!-- Duplicate set for the seamless loop -->
+      <img src="bontech.png" alt="bontech" width="160" height="112">
+      <img src="cratis.png" alt="cratis" width="160" height="112">
+      <img src="dcnorth.png" alt="dcnorth" width="160" height="112">
+      <img src="hturist.png" alt="hturist" width="160" height="112">
+      <img src="imperial-riviera.png" alt="imperial riviera" width="160" height="112">
+      <img src="mup.png" alt="mup" width="160" height="112">
+      <img src="KonicaMinolta.png" alt="Konica Minolta" width="160" height="112">
+      <img src="PW.png" alt="PW" width="160" height="112">
+      <img src="RB.png" alt="RB" width="160" height="112">
+      <img src="Valamar.png" alt="Valamar" width="160" height="112">
+      <img src="rbs.png" alt="rbs" width="160" height="112">
+      <img src="suri.png" alt="suri" width="160" height="112">
+      <img src="szfoi.png" alt="szfoi" width="160" height="112">
+      <img src="tupperware.png" alt="tupperware" width="160" height="112">
+      <img src="varazdin.png" alt="varazdin" width="160" height="112">
     </div>
   </div>
+
+  <script>
+    const carousel = document.getElementById('carousel');
+    const track = document.getElementById('track');
+    const imgs = Array.from(track.querySelectorAll('img'));
+
+    Promise.all(imgs.map(img => {
+      if (img.complete) return Promise.resolve();
+      return new Promise(resolve => {
+        img.addEventListener('load', resolve);
+        img.addEventListener('error', resolve); // don't let one broken file block the rest
+      });
+    })).then(() => {
+      // give layout one frame to settle before starting the loop
+      requestAnimationFrame(() => carousel.classList.add('loaded'));
+    });
+  </script>
 </body>
 </html>
